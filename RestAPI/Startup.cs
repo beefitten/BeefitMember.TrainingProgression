@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Domain.Setup;
+using Persistence.Setup;
 
 namespace RestAPI
 {
@@ -25,6 +27,11 @@ namespace RestAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RestAPI", Version = "v1" });
             });
+
+            services.AddDomain();
+
+            services.AddPersistence();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
