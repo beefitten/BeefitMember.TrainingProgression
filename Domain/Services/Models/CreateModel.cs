@@ -1,7 +1,7 @@
 
 namespace Domain.Services.Models
 {
-    public class CreateModel
+    public class CreateWeightGoalModel
     {
         public string ID { get; set; }
         public string user { get; set; }

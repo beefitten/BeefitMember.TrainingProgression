@@ -19,7 +19,7 @@ namespace RestAPI.Controllers
 
         [HttpPost]
         [Route("/create")]
-        public async Task<HttpStatusCode> CreateWeightGoal([FromBody] CreateModel model)
+        public async Task<HttpStatusCode> CreateWeightGoal([FromBody] CreateWeightGoalModel model)
         {
             return await _service.Create(model);
         }

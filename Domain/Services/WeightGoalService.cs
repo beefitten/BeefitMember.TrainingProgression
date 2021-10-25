@@ -18,7 +18,7 @@ namespace Domain.Services
             _repository = weightGoalRepository;
         }
 
-        public async Task<HttpStatusCode> Create(CreateModel createModel)
+        public async Task<HttpStatusCode> Create(CreateWeightGoalModel createModel)
         {
             var model = new WeightGoalModel
             {

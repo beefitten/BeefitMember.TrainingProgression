@@ -6,6 +6,6 @@ namespace Domain.Services
 {
     public interface IWeightGoalService
     {
-        Task<HttpStatusCode> Create(CreateModel model);
+        Task<HttpStatusCode> Create(CreateWeightGoalModel model);
     }
 }
