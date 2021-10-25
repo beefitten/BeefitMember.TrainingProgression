@@ -2,27 +2,29 @@ using System;
 using Microsoft.VisualBasic;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace Persistance.Models {
-    public class WeightGoalModel {
+namespace Persistance.Models
+{
+    public class WeightGoalModel
+    {
         [BsonId]
         [BsonRequired]
-        [BsonElement ("id")]
+        [BsonElement("ID")]
         public string ID { get; set; }
 
         [BsonRequired]
-        [BsonElement ("user")]
-        public string user { get; set; }
+        [BsonElement("User")]
+        public string User { get; set; }
 
         [BsonRequired]
-        [BsonElement ("currentWeight")]
-        public int currentWeight { get; set; }
+        [BsonElement("CurrentWeight")]
+        public int CurrentWeight { get; set; }
 
         [BsonRequired]
-        [BsonElement ("targetWeight")]
-        public int targetWeight { get; set; }
+        [BsonElement("TargetWeight")]
+        public int TargetWeight { get; set; }
 
         [BsonRequired]
-        [BsonElement ("timeLimit")]
-        public DateFormat timeLimit { get; set; }
+        [BsonElement("TimeLimit")]
+        public DateFormat TimeLimit { get; set; }
     }
 }
