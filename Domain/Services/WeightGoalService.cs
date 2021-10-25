@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain.Services.Models;
 using Persistance.Models;
-using Persistance.Repositories.IWeightGoalRepository;
+using Persistence.Repositories.WeightGoalRepository;
 
 namespace Domain.Services
 {
