@@ -2,8 +2,10 @@ using System.Net;
 using System.Threading.Tasks;
 using Persistance.Models;
 
-namespace Persistance.Repositories.IWeightGoalRepository {
-    public interface IWeightGoalRepository {
-        Task<HttpStatusCode> Create (WeightGoalModel model);
+namespace Persistence.Repositories.WeightGoalRepository
+{
+    public interface IWeightGoalRepository
+    {
+        Task<HttpStatusCode> Create(WeightGoalModel model);
     }
 }

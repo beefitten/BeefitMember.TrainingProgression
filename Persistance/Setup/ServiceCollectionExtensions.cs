@@ -1,5 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
-using Persistence.Repositories;
+using Persistence.Repositories.WeightGoalRepository;
 using Persistence.Settings;
 
 namespace Persistence.Setup
@@ -10,7 +10,7 @@ namespace Persistence.Setup
         {
             services
                 .AddTransient<IWeightGoalRepository, WeightGoalRepository>()
-                .AddTransient<IDatabaseSettings, WeightGoalSettings>();
+                .AddTransient<IDatabaseSettings, DatabaseSettings>();
 
             return services;
         }
