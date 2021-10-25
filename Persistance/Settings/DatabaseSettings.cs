@@ -1,8 +1,11 @@
-namespace Persistence.Settings {
-    public class DatabaseSettings : IDatabaseSettings {
-        public DatabaseSettings () {
+namespace Persistence.Settings
+{
+    public class DatabaseSettings : IDatabaseSettings
+    {
+        public DatabaseSettings()
+        {
             CollectionName = "WeightGoals";
-            ConnectionString = AppConfig.GetConnectionString ();
+            ConnectionString = AppConfig.GetConnectionString();
             DatabaseName = "BeefitMember";
         }
         public string CollectionName { get; }
