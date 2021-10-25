@@ -7,24 +7,32 @@ using Persistance.Models;
 using Persistance.Repositories.IWeightGoalRepository;
 using Persistence.Settings;
 
-namespace Persistence.Repository.WeightGoalRepository {
-    public class WeightGoalRepository : IWeightGoalRepository {
+namespace Persistence.Repository.WeightGoalRepository
+{
+    public class WeightGoalRepository : IWeightGoalRepository
+    {
         private readonly IMongoCollection<WeightGoalModel> _collection;
 
-        public WeightGoalRepository (IDatabaseSettings settings) {
-            var client = new MongoClient (settings.ConnectionString);
-            var database = client.GetDatabase (settings.DatabaseName);
+        public WeightGoalRepository(IDatabaseSettings settings)
+        {
+            var client = new MongoClient(settings.ConnectionString);
+            var database = client.GetDatabase(settings.DatabaseName);
 
-            _collection = database.GetCollection<WeightGoalModel> (settings.CollectionName);
+            _collection = database.GetCollection<WeightGoalModel>(settings.CollectionName);
         }
 
-        public async Task<HttpStatusCode> Create (WeightGoalModel model) {
+        public async Task<HttpStatusCode> Create(WeightGoalModel model)
+        {
             if (model == null)
-                throw new Exception ();
-            try {
-                await _collection.InsertOneAsync (model);
+                throw new Exception();
+            try
+            {
+                await _collection.InsertOneAsync(model);
                 return HttpStatusCode.OK;
-            } catch (Exception e) {
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("++++++++++++++++++++++++++++\n" + e + "\n++++++++++++++++++++++++++++");
                 return HttpStatusCode.Conflict;
             }
         }
