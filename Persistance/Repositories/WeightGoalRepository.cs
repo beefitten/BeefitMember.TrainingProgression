@@ -7,7 +7,7 @@ using Persistance.Models;
 using Persistance.Repositories.IWeightGoalRepository;
 using Persistence.Settings;
 
-namespace Persistence.Repository.WeightGoalRepository
+namespace Persistence.Repositories.WeightGoalRepository
 {
     public class WeightGoalRepository : IWeightGoalRepository
     {
