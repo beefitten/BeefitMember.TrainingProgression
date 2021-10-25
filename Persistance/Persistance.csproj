@@ -7,5 +7,6 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0-rc.2.21480.5"/>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0-rc.2.21480.5"/>
     <PackageReference Include="MongoDB.Driver" Version="2.13.2"/>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0-rc.2.21480.5"/>
   </ItemGroup>
 </Project>
