@@ -12,19 +12,11 @@ namespace Persistance.Models
         public string ID { get; set; }
 
         [BsonRequired]
-        [BsonElement("User")]
-        public string User { get; set; }
-
-        [BsonRequired]
         [BsonElement("CurrentWeight")]
         public int CurrentWeight { get; set; }
 
         [BsonRequired]
         [BsonElement("TargetWeight")]
         public int TargetWeight { get; set; }
-
-        [BsonRequired]
-        [BsonElement("TimeLimit")]
-        public DateFormat TimeLimit { get; set; }
     }
 }

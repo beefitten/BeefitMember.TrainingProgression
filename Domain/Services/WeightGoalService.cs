@@ -1,10 +1,8 @@
-using System;
 using System.Net;
-using System.Security.Claims;
-using System.Text;
 using System.Threading.Tasks;
 using Domain.Services.Models;
 using Persistance.Models;
+using Persistance.Repositories;
 using Persistence.Repositories.WeightGoalRepository;
 
 namespace Domain.Services
@@ -22,13 +20,22 @@ namespace Domain.Services
         {
             var model = new WeightGoalModel
             {
-                ID = createModel.ID,
-                User = createModel.user,
-                CurrentWeight = createModel.currentWeight,
-                TargetWeight = createModel.targetWeight,
+                ID = createModel.User,
+                CurrentWeight = createModel.CurrentWeight,
+                TargetWeight = createModel.TargetWeight,
             };
 
             return await _repository.Create(model);
+        }
+
+        public async Task<ReturnModel> Get(string user)
+        {
+            return await _repository.Get(user);
+        }
+
+        public async Task<HttpStatusCode> Delete(string user)
+        {
+            return await _repository.Delete(user);
         }
     }
 }
