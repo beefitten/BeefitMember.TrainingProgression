@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using Persistance.Repositories;
 using Persistence.Repositories.WeightGoalRepository;
 using Persistence.Settings;
 

@@ -1,9 +1,6 @@
-
-using System;
-
-namespace Domain.Services.Models
+﻿namespace Persistance.Repositories
 {
-    public class CreateWeightGoalModel
+    public class ReturnModel
     {
         public string User { get; set; }
         public int CurrentWeight { get; set; }

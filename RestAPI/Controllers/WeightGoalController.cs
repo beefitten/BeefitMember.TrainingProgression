@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Domain.Services;
 using Domain.Services.Models;
 using Microsoft.AspNetCore.Mvc;
+using Persistance.Repositories;
 
 namespace RestAPI.Controllers
 {
@@ -22,6 +23,20 @@ namespace RestAPI.Controllers
         public async Task<HttpStatusCode> CreateWeightGoal([FromBody] CreateWeightGoalModel model)
         {
             return await _service.Create(model);
+        }
+        
+        [HttpGet]
+        [Route("/get")]
+        public async Task<ReturnModel> GetWeightGoal(string user)
+        {
+            return await _service.Get(user);
+        }
+        
+        [HttpDelete]
+        [Route("/delete")]
+        public async Task<HttpStatusCode> DeleteWeightGoal(string user)
+        {
+            return await _service.Delete(user);
         }
     }
 }
